@@ -233,15 +233,6 @@ hypergeometric.pvalue <- function(cf = COMPACT.flat, om = occurance.matrix, n = 
   return(p.values)
 }
 
-#i and j are the indices in the rotated matrix
-getGeneNames <- function(m,n,i,j,mat){
-  target_list <- masterArray[m,n,ncol(mat)+i-j,i,]
-  #something like this may be more useful,
-  genes <- sapply(gene_list, function(x) which(grepl(x,target_list)))
-  print(names(genes)[which(genes > 0)])
-  #print(gene_list[which(gene_list %in% target_list)])
-}
-
 #############################################
 #   FUNCTIONS END // Psych?
 #############################################
